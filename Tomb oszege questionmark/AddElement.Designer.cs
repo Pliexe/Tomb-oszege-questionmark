@@ -31,20 +31,21 @@ namespace Tomb_oszege_questionmark
         {
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.skipBtn = new System.Windows.Forms.Button();
+            this.megsemBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(36, 12);
+            this.numericUpDown1.Location = new System.Drawing.Point(17, 12);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDown1.Size = new System.Drawing.Size(237, 23);
             this.numericUpDown1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(20, 41);
+            this.button1.Location = new System.Drawing.Point(17, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -52,25 +53,39 @@ namespace Tomb_oszege_questionmark
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // skipBtn
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Abort;
-            this.button2.Location = new System.Drawing.Point(101, 41);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Mégsem";
-            this.button2.UseVisualStyleBackColor = true;
+            this.skipBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.skipBtn.Location = new System.Drawing.Point(98, 41);
+            this.skipBtn.Name = "skipBtn";
+            this.skipBtn.Size = new System.Drawing.Size(75, 23);
+            this.skipBtn.TabIndex = 2;
+            this.skipBtn.Text = "Átugrás";
+            this.skipBtn.UseVisualStyleBackColor = true;
+            this.skipBtn.Click += new System.EventHandler(this.skipBtn_Click);
+            // 
+            // megsemBtn
+            // 
+            this.megsemBtn.DialogResult = System.Windows.Forms.DialogResult.Abort;
+            this.megsemBtn.Location = new System.Drawing.Point(179, 41);
+            this.megsemBtn.Name = "megsemBtn";
+            this.megsemBtn.Size = new System.Drawing.Size(75, 23);
+            this.megsemBtn.TabIndex = 3;
+            this.megsemBtn.Text = "Mégsem";
+            this.megsemBtn.UseVisualStyleBackColor = true;
+            this.megsemBtn.Click += new System.EventHandler(this.megsemBtn_Click);
             // 
             // AddElement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(202, 76);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(269, 73);
+            this.Controls.Add(this.megsemBtn);
+            this.Controls.Add(this.skipBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.numericUpDown1);
             this.Name = "AddElement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddElement";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
@@ -81,6 +96,7 @@ namespace Tomb_oszege_questionmark
 
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button skipBtn;
+        private System.Windows.Forms.Button megsemBtn;
     }
 }

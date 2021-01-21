@@ -18,6 +18,7 @@ namespace Tomb_oszege_questionmark
         {
             InitializeComponent();
             numericUpDownElemenSzam.Maximum = int.MaxValue;
+            numericUpDownElemenSzam.Select(0, 1);
         }
 
         private void bevitelBtn_Click(object sender, EventArgs e)
@@ -26,23 +27,40 @@ namespace Tomb_oszege_questionmark
 
             for (int i = 0; i < tomb.Length; i++)
                 using(AddElement addElement = new AddElement())
-                    if (addElement.ShowDialog() == DialogResult.OK)
-                        tomb[i] = addElement.value;
-                    else
-                        tomb[i] = 0;
+                {
+                    DialogResult result = addElement.ShowDialog();
 
-            WriteToRichTextbox();
+                    if (result == DialogResult.OK)
+                        tomb[i] = addElement.value;
+                    else if(result == DialogResult.Abort) {
+                        tomb = null;
+                        MessageBox.Show("Leálitva!");
+                        break;
+                    }
+                     else   tomb[i] = 0;
+                }
+
+            if(tomb != null) WriteToRichTextbox();
         }
 
         public void WriteToRichTextbox()
         {
-            richTextBox1.Text = string.Join('\n', tomb) + "\nÖsszeg: "+ tomb.Sum().ToString();
+            richTextBox1.Clear();
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
+            richTextBox1.SelectionFont = new Font("Segoe", 12);
+            richTextBox1.SelectedText = "\n" + string.Join('\n', tomb) + "\n";
+
+            richTextBox1.SelectionFont = new Font("Segoe", 15);
+            richTextBox1.SelectedText = "Összeg: " + tomb.Sum().ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             tomb = null;
             richTextBox1.Clear();
+            numericUpDownElemenSzam.Value = 1;
+            numericUpDownElemenSzam.Focus();
+            numericUpDownElemenSzam.Select(0, 1);
         }
 
         private void button2_Click(object sender, EventArgs e)

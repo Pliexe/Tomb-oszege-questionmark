@@ -39,7 +39,7 @@ namespace Tomb_oszege_questionmark
             // 
             // bevitelBtn
             // 
-            this.bevitelBtn.Location = new System.Drawing.Point(370, 138);
+            this.bevitelBtn.Location = new System.Drawing.Point(150, 10);
             this.bevitelBtn.Name = "bevitelBtn";
             this.bevitelBtn.Size = new System.Drawing.Size(75, 23);
             this.bevitelBtn.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace Tomb_oszege_questionmark
             // 
             // numericUpDownElemenSzam
             // 
-            this.numericUpDownElemenSzam.Location = new System.Drawing.Point(232, 138);
+            this.numericUpDownElemenSzam.Location = new System.Drawing.Point(12, 10);
             this.numericUpDownElemenSzam.Minimum = new decimal(new int[] {
             1,
             0,
@@ -66,7 +66,7 @@ namespace Tomb_oszege_questionmark
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(232, 197);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 69);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(213, 345);
             this.richTextBox1.TabIndex = 2;
@@ -74,7 +74,7 @@ namespace Tomb_oszege_questionmark
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(232, 560);
+            this.button1.Location = new System.Drawing.Point(12, 432);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -84,7 +84,7 @@ namespace Tomb_oszege_questionmark
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(370, 560);
+            this.button2.Location = new System.Drawing.Point(150, 432);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -96,13 +96,14 @@ namespace Tomb_oszege_questionmark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 611);
+            this.ClientSize = new System.Drawing.Size(239, 482);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.numericUpDownElemenSzam);
             this.Controls.Add(this.bevitelBtn);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownElemenSzam)).EndInit();
             this.ResumeLayout(false);

@@ -17,6 +17,8 @@ namespace Tomb_oszege_questionmark
             InitializeComponent();
             numericUpDown1.Minimum = int.MinValue;
             numericUpDown1.Maximum = int.MaxValue;
+            this.AcceptButton = button1;
+            numericUpDown1.Select(0, 1);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,6 +27,16 @@ namespace Tomb_oszege_questionmark
 
             DialogResult = DialogResult.OK;
             Close();
+        }
+
+        private void megsemBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skipBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
