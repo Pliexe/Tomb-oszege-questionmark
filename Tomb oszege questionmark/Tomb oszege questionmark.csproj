@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Tomb_oszege_questionmark</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <PackageId>Tomb_oszege_questionmark</PackageId>
   </PropertyGroup>
 
 </Project>
